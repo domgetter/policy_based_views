@@ -74,6 +74,6 @@ class BooksController < ApplicationController
     end
 
     def set_view_path
-      prepend_view_path('app/views/enterprise') if rand(10) % 2 == 0
+      prepend_view_path(path_for_environment)
     end
 end
