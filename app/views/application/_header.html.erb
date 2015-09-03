@@ -11,13 +11,15 @@
   <section class="top-bar-section">
   <!-- Right Nav Section -->
   <ul class="right">
-    <%= render 'header_nav' %>
     <li class="has-dropdown">
     <a href="#"><%= current_user.email %></a>
     <ul class="dropdown">
       <li class="active"><%= link_to "Sign out", sign_out_path, method: :delete %></li>
     </ul>
     </li>
+  </ul>
+  <ul class="left">
+    <%= current_user.navigation %>
   </ul>
   </section>
   </nav>
