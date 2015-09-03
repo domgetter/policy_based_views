@@ -1,7 +1,7 @@
 class BooksController < ApplicationController
   before_action :require_login
   before_action :set_book, only: [:show, :edit, :update, :destroy]
-  before_action :set_view_path, only: [:show]
+  before_action :set_view_path, only: [:index, :show]
 
   # GET /books
   # GET /books.json
