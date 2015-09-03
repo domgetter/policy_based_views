@@ -13,6 +13,7 @@ gem 'clearance'
 gem 'faker', '~> 1.5.0'
 gem 'pundit'
 gem 'foundation-rails'
+gem 'draper'
 
 group :development, :test do
   gem 'pry'
