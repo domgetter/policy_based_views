@@ -5,6 +5,8 @@ class ApplicationController < ActionController::Base
   # For APIs, you may want to use :null_session instead.
   protect_from_forgery with: :exception
 
+   rescue_from Pundit::NotAuthorizedError, with: :user_not_authorized
+
   private
 
   def path_for_entity_classification
@@ -13,5 +15,10 @@ class ApplicationController < ActionController::Base
 
   def entity_classification_folder
     current_user.entity.classification
+  end
+
+  def user_not_authorized
+    flash[:alert] = "You are not authorized to perform this action."
+    redirect_to(request.referrer || root_path)
   end
 end
