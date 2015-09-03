@@ -6,6 +6,10 @@
 4. rake db:seed
 5. bundle exec rails s
 
+## Reset application
+
+rake db:drop db:migrate db:seed
+
 ## Logins
 
 ### SMB
