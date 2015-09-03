@@ -1,5 +1,5 @@
-smb = Entity.create(classification: 'smb', name: 'Mr. Robot', logo: 'Team Playin ping-pong')
-enterprise = Entity.create(classification: 'enterprise', name: 'Evil Corp', logo: 'Team in business suits laughing')
+smb = Entity.create(classification: 'smb', name: 'Mr. Robot', logo: 'mr_robot.jpg')
+enterprise = Entity.create(classification: 'enterprise', name: 'E Corp', logo: 'evil_corp.png')
 
 User.create(email: 'smb@example.com', entity: smb, password: 'password')
 User.create(email: 'enterprise@example.com', entity: enterprise, password: 'password')

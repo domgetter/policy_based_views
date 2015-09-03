@@ -9,6 +9,11 @@ class ApplicationController < ActionController::Base
 
   private
 
+  def current_entity
+    current_user.entity
+  end
+  helper_method :current_entity
+
   def path_for_entity_classification
     "app/views/#{entity_classification_folder}"
   end

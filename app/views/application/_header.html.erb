@@ -1,0 +1,29 @@
+<div class="contain-to-grid sticky">
+  <nav class="top-bar" data-topbar role="navigation" data-options="sticky_on: large">
+  <ul class="title-area">
+    <li class="name">
+    <h1><a href="#"><%= current_entity.name %></a></h1>
+    </li>
+    <!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
+    <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
+  </ul>
+
+  <section class="top-bar-section">
+  <!-- Right Nav Section -->
+  <ul class="right">
+    <%= render 'header_nav' %>
+    <li class="has-dropdown">
+    <a href="#"><%= current_user.email %></a>
+    <ul class="dropdown">
+      <li class="active"><%= link_to "Sign out", sign_out_path, method: :delete %></li>
+    </ul>
+    </li>
+  </ul>
+  </section>
+  </nav>
+</div>
+
+<div id="logo">
+  <%= image_tag(current_entity.logo) %>
+</div>
+
