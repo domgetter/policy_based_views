@@ -1,7 +1,7 @@
 class BooksController < ApplicationController
   before_action :require_login
   before_action :set_book, only: [:show, :edit, :update, :destroy]
-  before_action :set_view_path, only: [:index]
+  before_action :set_view_path, only: [:show]
 
   # GET /books
   # GET /books.json
@@ -75,6 +75,6 @@ class BooksController < ApplicationController
     end
 
     def set_view_path
-      prepend_view_path(path_for_environment)
+      prepend_view_path(path_for_entity_classification)
     end
 end
