@@ -12,6 +12,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'clearance'
 gem 'faker', '~> 1.5.0'
 gem 'pundit'
+gem 'foundation-rails'
 
 group :development, :test do
   gem 'pry'

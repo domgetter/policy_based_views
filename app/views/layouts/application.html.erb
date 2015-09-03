@@ -1,26 +1,32 @@
 <!DOCTYPE html>
-<html>
-<head>
-  <title>PolicyBasedViews</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  <%= csrf_meta_tags %>
-</head>
-<body>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <header>
-    <% if signed_in? %>
-      <%= current_user.email %>
-      <%= button_to "Sign out", sign_out_path, method: :delete %>
-    <% else %>
-      <%= link_to "Sign in", sign_in_path %>
-    <% end %>
-  </header>
+    <title>Policy Views</title>
 
-  <p id="notice"><%= notice %></p>
-  <p id="alert"><%= alert %></p>
+    <%= stylesheet_link_tag    "application" %>
+    <%= javascript_include_tag "vendor/modernizr" %>
+    <%= javascript_include_tag "application", 'data-turbolinks-track' => true %>
+    <%= csrf_meta_tags %>
+  </head>
 
-  <%= yield %>
+  <body>
 
-</body>
+    <header>
+      <% if signed_in? %>
+        <%= current_user.email %>
+        <%= button_to "Sign out", sign_out_path, method: :delete %>
+      <% else %>
+        <%= link_to "Sign in", sign_in_path %>
+      <% end %>
+    </header>
+
+    <p id="notice"><%= notice %></p>
+    <p id="alert"><%= alert %></p>
+
+    <%= yield %>
+
+  </body>
 </html>

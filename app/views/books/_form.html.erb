@@ -24,6 +24,6 @@
     <%= f.select :genre_id, @genres.map { |x| [x.name, x.id] } %>
   </div>
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit class: 'button success' %>
   </div>
 <% end %>
