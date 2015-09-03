@@ -19,6 +19,10 @@
     <%= f.label :author %><br>
     <%= f.text_field :author %>
   </div>
+  <div class="field">
+    <%= f.label :genre %><br>
+    <%= f.select :genre_id, @genres.map { |x| [x.name, x.id] } %>
+  </div>
   <div class="actions">
     <%= f.submit %>
   </div>
