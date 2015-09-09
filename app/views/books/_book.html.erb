@@ -2,7 +2,7 @@
   <td><%= book.title %></td>
   <td><%= book.author %></td>
   <td><%= book.genre.name %></td>
-  <td><%= link_to 'Show', book %></td>
-  <td><%= link_to 'Edit', edit_book_path(book) %></td>
-  <td><%= link_to 'Destroy', book, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  <% book.actions.each do |action| %>
+    <td><%= action.hyperlink %></td>
+  <% end %>
 </tr>
